@@ -5,16 +5,26 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
+      ticks: 637935835867582820
+    m_Hash: 3299752891
+=======
       ticks: 637935484379626440
     m_Hash: 1170386245
+>>>>>>> Develop
   m_LockFileStatus:
     m_FilePath: C:/Users/The Basement/Documents/GitHub/RolloftheDice/Project Dice/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
+      ticks: 637935835867582820
+    m_Hash: 1829821595
+=======
       ticks: 637935484379727199
     m_Hash: 2963111869
+>>>>>>> Develop
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
