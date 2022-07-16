@@ -416,7 +416,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
 --- !u!1001 &254983651
 PrefabInstance:
@@ -530,7 +530,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.06639, y: 1}
+    m_SensorSize: {x: 2.1558442, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -546,7 +546,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284705357}
-  m_LocalRotation: {x: 0.2958034, y: -0.05082692, z: 0.0157636, w: 0.95376545}
+  m_LocalRotation: {x: 0.1357798, y: -0.0527211, z: 0.0072358195, w: 0.9893089}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -667,7 +667,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.06639, y: 1}
+    m_SensorSize: {x: 2.1558442, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -683,7 +683,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373926655}
-  m_LocalRotation: {x: 0.33994293, y: -0.05003685, z: 0.018115839, w: 0.93893933}
+  m_LocalRotation: {x: 0.18175016, y: -0.05232648, z: 0.00968562, w: 0.9819038}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -788,7 +788,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
 --- !u!1 &557781214
 GameObject:
@@ -843,7 +843,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.06639, y: 1}
+    m_SensorSize: {x: 2.1558442, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -859,7 +859,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557781214}
-  m_LocalRotation: {x: 0.31791148, y: -0.050446514, z: 0.016941778, w: 0.9466258}
+  m_LocalRotation: {x: 0.15875804, y: -0.052538503, z: 0.008460349, w: 0.98588234}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -979,7 +979,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &652936396
 GameObject:
@@ -992,7 +992,7 @@ GameObject:
   - component: {fileID: 652936398}
   - component: {fileID: 652936397}
   m_Layer: 0
-  m_Name: 3rd person camera
+  m_Name: ThirdPersonCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1028,7 +1028,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.06639, y: 1}
+    m_SensorSize: {x: 2.1558442, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1044,7 +1044,7 @@ MonoBehaviour:
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
     m_InputAxisValue: 0
-    m_InvertInput: 0
+    m_InvertInput: 1
     m_MinValue: 0
     m_MaxValue: 1
     m_Wrap: 0
@@ -1055,7 +1055,7 @@ MonoBehaviour:
       m_LegacyHeadingDefinition: -1
       m_LegacyVelocityFilterStrength: -1
   m_YAxisRecentering:
-    m_enabled: 0
+    m_enabled: 1
     m_WaitTime: 1
     m_RecenteringTime: 2
     m_LegacyHeadingDefinition: -1
@@ -1063,12 +1063,12 @@ MonoBehaviour:
   m_XAxis:
     Value: 0
     m_SpeedMode: 0
-    m_MaxSpeed: 300
+    m_MaxSpeed: 500
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
     m_InputAxisValue: 0
-    m_InvertInput: 1
+    m_InvertInput: 0
     m_MinValue: -180
     m_MaxValue: 180
     m_Wrap: 1
@@ -1093,7 +1093,7 @@ MonoBehaviour:
   m_Orbits:
   - m_Height: 3.25
     m_Radius: 1.75
-  - m_Height: 2.5
+  - m_Height: 1.15
     m_Radius: 3
   - m_Height: 0.4
     m_Radius: 1.3
@@ -1110,7 +1110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 652936396}
   m_LocalRotation: {x: -0, y: 0.053215344, z: -0, w: 0.9985831}
-  m_LocalPosition: {x: -0.000031473, y: 3.74, z: -3}
+  m_LocalPosition: {x: -0.000031473, y: 2.3899999, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1118,7 +1118,7 @@ Transform:
   - {fileID: 557781216}
   - {fileID: 284705359}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 6.101, z: 0}
 --- !u!1 &673834722
 GameObject:
@@ -1377,7 +1377,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 90}
 --- !u!1 &892925913
 GameObject:
@@ -1475,7 +1475,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1001 &1036952757
 PrefabInstance:
@@ -1669,7 +1669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 2.5, z: -3}
+  m_FollowOffset: {x: 0, y: 1.15, z: -3}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -1791,7 +1791,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 274b7df06ae3960428c984881a2be612, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 274b7df06ae3960428c984881a2be612, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1992,8 +1992,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1350787707}
-  moveSpeed: 10
+  moveSpeed: 1.5
   diceCenter: {fileID: 0}
+  cam: {fileID: 1643064359}
   isGrounded: 0
   jumpForce: 3
 --- !u!64 &1350787706
@@ -2044,41 +2045,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.027
   m_Center: {x: -0.0000000018626451, y: 0.019497175, z: 0}
---- !u!114 &1350787712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1350787704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1df734931f1f754db73828c61fbecd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 1350787713}
-  cam: {fileID: 1643064359}
-  speed: 6
-  turnSmoothTime: 0.1
-  turnSmoothVelocity: 0
---- !u!143 &1350787713
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1350787704}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Height: 0.05
-  m_Radius: 0.02403143
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.02, z: 0}
 --- !u!1 &1405541810
 GameObject:
   m_ObjectHideFlags: 3
@@ -2153,7 +2119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 2.5, z: -3}
+  m_FollowOffset: {x: 0, y: 1.15, z: -3}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -2339,7 +2305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 2.5, z: -3}
+  m_FollowOffset: {x: 0, y: 1.15, z: -3}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -2484,13 +2450,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643064355}
-  m_LocalRotation: {x: 0.31836262, y: -0.000000017563789, z: 0.0000000058858234, w: 0.9479691}
-  m_LocalPosition: {x: -0.000031473, y: 3.74, z: -3}
+  m_LocalRotation: {x: 0.1589833, y: 0.000000009067208, z: -0.0000000014435951, w: 0.9872813}
+  m_LocalPosition: {x: -0.000031473, y: 2.3899999, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 37.128, y: 58.377, z: 0}
 --- !u!114 &1643064360
 MonoBehaviour:
@@ -2562,6 +2528,7 @@ MonoBehaviour:
   rb: {fileID: 1772157839}
   moveSpeed: 10
   diceCenter: {fileID: 0}
+  cam: {fileID: 0}
   isGrounded: 0
   jumpForce: 10
 --- !u!54 &1772157839
@@ -2656,7 +2623,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1802492173
 PrefabInstance:
@@ -2668,7 +2635,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 65479dbfc70f2694d885916e068a055a, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 65479dbfc70f2694d885916e068a055a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2727,7 +2694,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8bd455931eb81af4eaa7c8c204998d33, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bd455931eb81af4eaa7c8c204998d33, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2872,7 +2839,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &2143894054
 GameObject:
@@ -2970,5 +2937,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
