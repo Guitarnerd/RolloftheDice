@@ -1,13 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/DiceDetect.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/World.unity
-=======
-- path: Assets/Scenes/CameraMovement.unity
->>>>>>> Develop
->>>>>>> Develop
+- path: Assets/Scenes/World-DiceSides.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
