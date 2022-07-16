@@ -30,6 +30,13 @@ public class PlayerController : MonoBehaviour
             Jump();
             isGrounded = false;
         }
+
+        // Vector3 inputVector = new Vector3()
+
+        // if (inputVector.magnitude >= 0.1f)
+        // {
+
+        // }
     }
 
     void FixedUpdate()
@@ -39,8 +46,8 @@ public class PlayerController : MonoBehaviour
 
     private void ProcessInputs()
     {
-        xInput = Input.GetAxis("Horizontal");
-        zInput = Input.GetAxis("Vertical");
+       xInput = Input.GetAxis("Horizontal");
+       zInput = Input.GetAxis("Vertical");
         
     }
 
