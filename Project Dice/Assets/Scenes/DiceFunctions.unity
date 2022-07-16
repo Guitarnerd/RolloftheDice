@@ -2860,6 +2860,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 2
   player: {fileID: 2054630518}
+  maxFail: 9.75
+  playerMassWithIce: 0.75
+  floatHeight: 2.62
+  floatTime: 2.66
+  tempPosistion: {x: 0, y: 1, z: 0}
 --- !u!114 &2054630516
 MonoBehaviour:
   m_ObjectHideFlags: 0
