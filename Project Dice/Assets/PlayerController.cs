@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
     public float moveSpeed = 10f;
     public GameObject diceCenter;
-
+    public Transform cam;
     public bool isGrounded;
     private float xInput;
     private float zInput;
@@ -30,23 +30,27 @@ public class PlayerController : MonoBehaviour
             Jump();
             isGrounded = false;
         }
+
+        Vector3 direction = new Vector3(xInput, 0f, zInput);
+        if (direction.magnitude >= 0.1f)
+        {
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+
+            rb.AddForce(moveDir * moveSpeed);
+        }
+
     }
 
     void FixedUpdate()
     {
-        Move();
+
     }
 
     private void ProcessInputs()
     {
-        xInput = Input.GetAxis("Horizontal");
-        zInput = Input.GetAxis("Vertical");
-        
-    }
-
-    private void Move()
-    {
-        rb.AddForce(new Vector3(xInput, 0f, zInput) * moveSpeed);
+       xInput = Input.GetAxis("Horizontal");
+       zInput = Input.GetAxis("Vertical");
     }
 
     private void Jump()
@@ -59,5 +63,4 @@ public class PlayerController : MonoBehaviour
         isGrounded = true;
         Debug.Log("is Grounded");
     }
-
 }
