@@ -1,5 +1,13 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Tutorial Area.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/MainMenu.unity
+=======
+- path: Assets/Scenes/Camera and Movement Fix.unity
+>>>>>>> Develop
+>>>>>>> Develop
   isLoaded: 1
   isActive: 1
   isSubScene: 0
