@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/World.unity
-=======
-- path: Assets/Scenes/CameraMovement.unity
->>>>>>> Develop
+- path: Assets/Scenes/Camera and Movement Fix.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
