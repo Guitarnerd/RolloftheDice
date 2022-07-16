@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/CameraMovement.unity
+- path: Assets/Scenes/DiceDetect.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
