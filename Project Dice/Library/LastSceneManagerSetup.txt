@@ -1,9 +1,0 @@
-sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/World.unity
-=======
-- path: Assets/Scenes/CameraMovement.unity
->>>>>>> Develop
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
