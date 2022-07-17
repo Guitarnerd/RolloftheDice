@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1037
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -477,13 +477,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art/animations
+    - Assets/SFX
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Art/animations
+  - Assets/SFX
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\danie\OneDrive\Documents\GitHub\RolloftheDice\Project
     Dice
@@ -491,9 +491,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 92690000
-    m_LastClickedID: 27026
-    m_ExpandedIDs: 00000000f46800006869000000ca9a3bffffff7f
+    m_SelectedIDs: 6a690000
+    m_LastClickedID: 26986
+    m_ExpandedIDs: 00000000006900006669000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -521,7 +521,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f4680000
+    m_ExpandedIDs: 0000000000690000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -648,10 +648,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 18fbffff
+      scrollPos: {x: 0, y: 1653}
+      m_SelectedIDs: 52e5ffff
+      m_LastClickedID: -6830
+      m_ExpandedIDs: 0cfbffff9c600000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -933,9 +933,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 12.74258, y: 6.071629, z: 16.256401}
+    m_Target: {x: 13.371321, y: 6.593591, z: 16.404922}
     speed: 2
-    m_Value: {x: 12.74258, y: 6.071629, z: 16.256401}
+    m_Value: {x: 13.371321, y: 6.593591, z: 16.404922}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -981,13 +981,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.3490197, y: -0.2845879, z: 0.1121383, w: -0.8858852}
+    m_Target: {x: -0.4105613, y: 0.472877, z: -0.26469144, w: -0.73344404}
     speed: 2
-    m_Value: {x: -0.348821, y: -0.2858917, z: 0.11265198, w: -0.8853809}
+    m_Value: {x: -0.41092193, y: 0.47173503, z: -0.2640522, w: -0.7340883}
   m_Size:
     m_Target: 4.594192
     speed: 2
-    m_Value: 4.396356
+    m_Value: 4.594192
   m_Ortho:
     m_Target: 0
     speed: 2
