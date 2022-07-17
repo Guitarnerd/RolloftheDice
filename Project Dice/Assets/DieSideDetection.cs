@@ -59,9 +59,11 @@ public class DieSideDetection : MonoBehaviour
         
         if(collision.gameObject.tag == "Trash")
         {
-
-            Debug.Log("Hopefully burning");
-            Destroy(collision.gameObject);
+            if (fireBool || winBool)
+            {
+                
+                Destroy(collision.gameObject);
+            }
         }
     }
 
@@ -142,14 +144,14 @@ public class DieSideDetection : MonoBehaviour
             criticalFail();
 
         if (number == 2 || number == 3 || number == 4 || number == 5 || number == 6 || number == 7)
-            fire();
+            ice();
 
         if (number == 8 || number == 9 || number == 10 || number == 11 || number == 12 || number == 13)
             fire();
 
 
         if (number == 14 || number == 15 || number == 16 || number == 17 || number == 18 || number == 19)
-            fire();
+            electricity();
 
         if (number == 20)
             criticalSuccess();
@@ -212,7 +214,7 @@ public class DieSideDetection : MonoBehaviour
          
     }
 
-    public float maxFail;
+    public float maxFail = 10f;
     private Vector3 randomLaunch(float min, float max)
     {
         var x = Random.Range(min, max);
