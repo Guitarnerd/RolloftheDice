@@ -13,15 +13,44 @@ public class DieSideDetection : MonoBehaviour
 
     public Rigidbody player;
 
+    public GameObject failAura;
+    public GameObject iceAura;
+    public GameObject fireAura;
+    public GameObject elecAura;
+    public GameObject winAura;
+
+
+    public float floatHeightForElec = .13f;
+    public float floatheightForWIN = .2f;
+    private Vector3 startPosition;
+
+
+    
+
     // Update is called once per frame
     void FixedUpdate()
-    {       
+    {
+
         if (Time.time > currentTimer)
         {
             resetAffects();
             currentTimer = Time.time + cooldown;
             action();
         }
+        if (Input.GetKey(KeyCode.Mouse0) && elec)
+        {
+            startPosition = player.position;
+            player.transform.position = new Vector3(startPosition.x,startPosition.y+ floatHeightForElec, startPosition.z);
+        }
+        if(Input.GetKey(KeyCode.Mouse0) && winBool)
+        {
+            startPosition = player.position;
+            player.transform.position = new Vector3(startPosition.x, startPosition.y + floatheightForWIN, startPosition.z);
+        }
+        //if (Input.GetButton("space") && winBool)
+        
+
+        
 
     }
 
@@ -91,14 +120,18 @@ public class DieSideDetection : MonoBehaviour
 
     }
 
-
+    private bool failBool;
     private bool iceBool;
     private bool fireBool;
     private bool elec;
-    private bool win;
+    private bool winBool;
     void resetAffects()
     {
-
+        if (failBool)
+        {
+            criticalFail();
+            return;
+        }
         if (iceBool)
         {
             //RESET ice
@@ -117,7 +150,7 @@ public class DieSideDetection : MonoBehaviour
             electricity();
             return;
         }
-        if (win)
+        if (winBool)
         {
             //RESET win
             criticalSuccess();
@@ -126,12 +159,20 @@ public class DieSideDetection : MonoBehaviour
             
     }
 
-
     //All Crit fail stuff
     void criticalFail()
     {
-         
+        if (!failBool)
+        {
+            failBool = true;
+            failAura.SetActive(true);
             player.velocity = randomLaunch(2f, maxFail);
+        } else
+        {
+            failAura.SetActive(false);
+            failBool = false;
+        }
+        
          
     }
 
@@ -145,89 +186,74 @@ public class DieSideDetection : MonoBehaviour
     }
 
 
-
-
-
-
-
-
-
-
-
-    public float playerMassWithIce = .85f;
+    
+    public SphereCollider iceCollide;
     void ice()
     {
         if (!iceBool)
         {
+            iceCollide.enabled=true;
             iceBool = true;
-            Debug.Log("Ice");
-
-            player.mass = playerMassWithIce;
+            iceAura.SetActive(true);
+            
+           
+            
         } else
         {
-            player.mass = 1f;
+            iceCollide.enabled = false;
             iceBool = false;
+            iceAura.SetActive(false);
         }
 
     }
+
+    public bool destroyWithFire;
     void fire()
     {
         if (!fireBool)
         {
+            destroyWithFire = true;
+            fireAura.SetActive(true);
             fireBool = true;
-            Debug.Log("Fire");
+            
         } else
         {
+            destroyWithFire = false;
+            fireAura.SetActive(false);
             fireBool = false;
         }
 
     }
+
+
     void electricity()
     {
         if (!elec)
         {
+            elecAura.SetActive(true);
             elec = true;
-            Debug.Log("elec");
+           
         } else
         {
+            elecAura.SetActive(false);
             elec = false;
         }
     }
 
 
-
-
-
-
-
-    public float floatHeight;
-    public float floatTime;
-    private Vector3 startPosition;
-    public Vector3 tempPosistion;
-    private bool floating;
-    private float startFloat = Time.time;
-
     void criticalSuccess()
     {
-
-        tempPosistion = new Vector3(0, floatHeight, 0);
-        startPosition = player.position;
-
-        startPosition = startPosition + tempPosistion;
-
-        if (!floating)
+        if (!winBool)
         {
+            winBool = true;
+            winAura.SetActive(true);
             
-            player.transform.position = startPosition;
-            floating = true;
 
-            if((Time.time - startFloat)> 5)
-            {
-
-            }
+        } else
+        {
+            winBool = false;
+            winAura.SetActive(false);
         }
-        Debug.Log("Win");
-        
     }
 
    
