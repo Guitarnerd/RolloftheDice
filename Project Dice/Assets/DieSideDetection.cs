@@ -50,16 +50,13 @@ public class DieSideDetection : MonoBehaviour
         }
 
         
-        if (fireBool)
-        {
-
-        }
+        
           
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collision");
+        
         if(collision.gameObject.tag == "Trash")
         {
 
