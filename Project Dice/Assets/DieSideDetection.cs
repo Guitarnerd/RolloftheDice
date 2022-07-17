@@ -76,7 +76,7 @@ public class DieSideDetection : MonoBehaviour
     IEnumerator rolltime()
     {
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(60);
         action();
         yield return new WaitForSeconds(1.8f);
         rdc.enableCamera();
@@ -144,14 +144,14 @@ public class DieSideDetection : MonoBehaviour
             criticalFail();
 
         if (number == 2 || number == 3 || number == 4 || number == 5 || number == 6 || number == 7)
-            fire();
+            ice();
 
         if (number == 8 || number == 9 || number == 10 || number == 11 || number == 12 || number == 13)
             fire();
 
 
         if (number == 14 || number == 15 || number == 16 || number == 17 || number == 18 || number == 19)
-            fire();
+            electricity();
 
         if (number == 20)
             criticalSuccess();

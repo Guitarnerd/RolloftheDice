@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
-            rb.AddForce(moveDir * moveSpeed/1.5f);
+            rb.AddForce(moveDir * moveSpeed/1.7f);
         }
 
     }
@@ -74,9 +74,17 @@ public class PlayerController : MonoBehaviour
         Debug.Log("is Grounded");
         if (other.gameObject.tag == "gold")
         {
+            
+            if (goldEffect == true) {
+                goldEffect.SetActive(false);
             goldEffect.SetActive(true);
             Destroy(other.gameObject);
-            Debug.Log("Got gold bro");
+        } else
+            {
+                goldEffect.SetActive(true);
+                Destroy(other.gameObject);
+            }
+
         }
     }
 }
