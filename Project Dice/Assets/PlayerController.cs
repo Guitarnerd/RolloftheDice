@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private float zInput;
     private SphereCollider groundCheck;
     public float jumpForce = 10f;
+    public GameObject goldEffect;
     private float velocity;
 
     // Start is called before the first frame update
@@ -68,5 +69,11 @@ public class PlayerController : MonoBehaviour
     {
         isGrounded = true;
         Debug.Log("is Grounded");
+        if (other.gameObject.tag == "gold")
+        {
+            goldEffect.SetActive(true);
+            Destroy(other.gameObject);
+            Debug.Log("Got gold bro");
+        }
     }
 }
