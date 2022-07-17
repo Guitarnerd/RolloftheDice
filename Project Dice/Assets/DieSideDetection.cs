@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class DieSideDetection : MonoBehaviour
@@ -35,36 +36,70 @@ public class DieSideDetection : MonoBehaviour
         {
             resetAffects();
             currentTimer = Time.time + cooldown;
-            action();
+            starTimer();
         }
         if (Input.GetKey(KeyCode.Mouse0) && elec)
         {
             startPosition = player.position;
             player.transform.position = new Vector3(startPosition.x,startPosition.y+ floatHeightForElec, startPosition.z);
         }
-        if(Input.GetKey(KeyCode.Mouse0) && winBool)
+        if (Input.GetKey(KeyCode.Mouse0) && winBool)
         {
             startPosition = player.position;
             player.transform.position = new Vector3(startPosition.x, startPosition.y + floatheightForWIN, startPosition.z);
         }
-        //if (Input.GetButton("space") && winBool)
-        
 
         
+        
+          
+    }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+        if(collision.gameObject.tag == "Trash")
+        {
+
+            Debug.Log("Hopefully burning");
+            Destroy(collision.gameObject);
+        }
     }
 
 
+    private void starTimer()
+    {
+        StartCoroutine(rolltime());
+    }
+    public RollingDiceCamera rdc;
+    IEnumerator rolltime()
+    {
+
+        yield return new WaitForSeconds(60);
+        action();
+        yield return new WaitForSeconds(1.8f);
+        rdc.enableCamera();
+        ttr.SetActive(false);
+        yield return new WaitForSeconds(1);
+        rollDice();
+        yield return new WaitForSeconds(4);
+        readHighPoint();
+        yield return new WaitForSeconds(0.5f);
+        rdc.disableCamera();
+    }
+    public GameObject ttr;
+    
     //What happens once the timer is completed
     void action()
     {
-        //the animations will be above readHighPoint
 
-
-        readHighPoint();
-
+        ttr.SetActive(true);
 
         //the setting of Dice states will be below readHighPoint
+    }
+    public DiceRollBehaviour drb;
+    public void rollDice()
+    {
+        drb.RollForEffect();
     }
 
 
@@ -97,6 +132,7 @@ public class DieSideDetection : MonoBehaviour
 
 
 
+
     //Checks the number and sends to the different states
     public void roll(int number)
     {
@@ -106,14 +142,14 @@ public class DieSideDetection : MonoBehaviour
             criticalFail();
 
         if (number == 2 || number == 3 || number == 4 || number == 5 || number == 6 || number == 7)
-            ice();
+            fire();
 
         if (number == 8 || number == 9 || number == 10 || number == 11 || number == 12 || number == 13)
             fire();
 
 
         if (number == 14 || number == 15 || number == 16 || number == 17 || number == 18 || number == 19)
-            electricity();
+            fire();
 
         if (number == 20)
             criticalSuccess();
