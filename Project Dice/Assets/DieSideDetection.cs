@@ -230,6 +230,7 @@ public class DieSideDetection : MonoBehaviour
     {
         if (!iceBool)
         {
+           
             iceCollide.enabled=true;
             iceBool = true;
             iceAura.SetActive(true);
@@ -250,6 +251,7 @@ public class DieSideDetection : MonoBehaviour
     {
         if (!fireBool)
         {
+         
             destroyWithFire = true;
             fireAura.SetActive(true);
             fireBool = true;
@@ -277,6 +279,9 @@ public class DieSideDetection : MonoBehaviour
             elec = false;
         }
     }
+
+
+ 
 
 
     void criticalSuccess()
