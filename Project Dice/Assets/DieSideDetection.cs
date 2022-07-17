@@ -59,9 +59,11 @@ public class DieSideDetection : MonoBehaviour
         
         if(collision.gameObject.tag == "Trash")
         {
-
-            Debug.Log("Hopefully burning");
-            Destroy(collision.gameObject);
+            if (fireBool || winBool)
+            {
+                
+                Destroy(collision.gameObject);
+            }
         }
     }
 
@@ -74,7 +76,7 @@ public class DieSideDetection : MonoBehaviour
     IEnumerator rolltime()
     {
 
-        yield return new WaitForSeconds(60);
+        yield return new WaitForSeconds(5);
         action();
         yield return new WaitForSeconds(1.8f);
         rdc.enableCamera();
@@ -212,7 +214,7 @@ public class DieSideDetection : MonoBehaviour
          
     }
 
-    public float maxFail;
+    public float maxFail = 10f;
     private Vector3 randomLaunch(float min, float max)
     {
         var x = Random.Range(min, max);

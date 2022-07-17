@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    public AudioClip rolling;
+
     // Update is called once per frame
     void Update()
     {
@@ -35,6 +37,7 @@ public class PlayerController : MonoBehaviour
         Vector3 direction = new Vector3(xInput, 0f, zInput);
         if (direction.magnitude >= 0.1f && isGrounded)
         {
+            
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
@@ -44,7 +47,7 @@ public class PlayerController : MonoBehaviour
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
-            rb.AddForce(moveDir * moveSpeed/2);
+            rb.AddForce(moveDir * moveSpeed/1.5f);
         }
 
     }
